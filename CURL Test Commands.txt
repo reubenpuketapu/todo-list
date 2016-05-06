@@ -1,0 +1,61 @@
+CURL Test Commands:
+
+---------------------------------------------------
+GET:
+All of the task items:
+
+curl https://cryptic-sands-19648.herokuapp.com/get
+
+curl localhost:8080/get
+
+
+---------------------------------------------------
+GET:
+Simple hello ‘name’ response:
+
+curl https://cryptic-sands-19648.herokuapp.com/hello/name
+
+curl localhost:8080/hello/name
+
+---------------------------------------------------
+GET:
+Simple successful response:
+
+curl https://cryptic-sands-19648.herokuapp.com/test
+
+curl localhost:8080/test
+
+
+---------------------------------------------------
+POST:
+Add a new task item:
+
+curl --data "" https://cryptic-sands-19648.herokuapp.com/post/name/false
+
+curl --data "" localhost:8080/post/name/false
+
+Can replace "name" in the url to any name to be added.
+
+---------------------------------------------------
+PUT:
+Change a task item to done:
+
+curl -X PUT https://cryptic-sands-19648.herokuapp.com/put/name/true
+
+curl -X PUT localhost:8080/put/name/true
+
+Can replace "name" in the url to any name to be changed.
+Also can change "true" to "false" to make the task not completed.
+
+---------------------------------------------------
+PUT:
+Remove a task item:
+
+curl -X PUT https://cryptic-sands-19648.herokuapp.com/remove/name
+
+curl -X PUT localhost:8080/remove/name
+
+Can replace "name" in the url to any name to be removed.
+
+---------------------------------------------------
+
